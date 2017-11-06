@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RQk-2A-75N">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do Table View Controller-->
+        <scene sceneID="Yr2-DN-8lw">
+            <objects>
+                <tableViewController id="yip-RJ-BRD" customClass="ToDoTableViewController" customModule="Done" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jBl-FJ-rT2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" showsReorderControl="YES" indentationWidth="0.0" reuseIdentifier="toDoCellIdentifier" editingAccessoryType="detailButton" rowHeight="107" id="tFg-hJ-uTd" customClass="ToDoTableViewCell" customModule="Done" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tFg-hJ-uTd" id="ir1-b2-tzw" customClass="ToDoTableViewCell" customModule="Done" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-qw-2YS">
+                                            <rect key="frame" x="20" y="20" width="375" height="67"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-r8-k6u">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <state key="normal" title="C">
+                                                        <color key="titleColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="doneButtonPressed:" destination="tFg-hJ-uTd" eventType="touchUpInside" id="Eb2-xb-VhD"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgG-XL-Rux">
+                                                    <rect key="frame" x="30" y="0.0" width="30" height="67"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <state key="normal" title="U">
+                                                        <color key="titleColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="urgentButtonPressed:" destination="tFg-hJ-uTd" eventType="touchUpInside" id="r3d-0n-vlE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjh-g2-ubc">
+                                                    <rect key="frame" x="60" y="0.0" width="30" height="67"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <state key="normal" title="I">
+                                                        <color key="titleColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="importantButtonPressed:" destination="tFg-hJ-uTd" eventType="touchUpInside" id="sKj-c9-LI6"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZH-B4-RV2">
+                                                    <rect key="frame" x="90" y="0.0" width="285" height="67"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="iE0-qw-2YS" secondAttribute="bottom" constant="20" symbolic="YES" id="1bE-To-Ptb"/>
+                                        <constraint firstItem="iE0-qw-2YS" firstAttribute="leading" secondItem="ir1-b2-tzw" secondAttribute="leading" constant="20" symbolic="YES" id="C5f-dE-Ytx"/>
+                                        <constraint firstItem="iE0-qw-2YS" firstAttribute="centerY" secondItem="ir1-b2-tzw" secondAttribute="centerY" id="GZ6-y5-hih"/>
+                                        <constraint firstItem="iE0-qw-2YS" firstAttribute="trailing" secondItem="ir1-b2-tzw" secondAttribute="trailing" constant="20" symbolic="YES" id="dAx-NC-gXs"/>
+                                        <constraint firstItem="iE0-qw-2YS" firstAttribute="top" secondItem="ir1-b2-tzw" secondAttribute="top" constant="20" symbolic="YES" id="mv5-eh-Kid"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="doneButton" destination="Jpf-r8-k6u" id="xJv-u7-wDu"/>
+                                    <outlet property="importantButton" destination="Fjh-g2-ubc" id="5A1-Ti-HMZ"/>
+                                    <outlet property="titleLabel" destination="NZH-B4-RV2" id="Rmr-Io-hJO"/>
+                                    <outlet property="urgentButton" destination="cgG-XL-Rux" id="1A9-In-YgM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yip-RJ-BRD" id="Uby-Xv-pXR"/>
+                            <outlet property="delegate" destination="yip-RJ-BRD" id="0Ng-AX-96B"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DiF-tR-azP">
+                        <barButtonItem key="leftBarButtonItem" id="iGh-Z6-DHa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n2i-7E-8Gu">
+                                <rect key="frame" x="16" y="9" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done ✓"/>
+                            </button>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem tag="1" id="zAB-EO-Yp0">
+                                <button key="customView" opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" id="73z-qr-BQI">
+                                    <rect key="frame" x="329" y="9" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="3">
+                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="barButtonAction:" destination="yip-RJ-BRD" eventType="touchUpInside" id="U2k-hn-hWW"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem tag="2" style="done" id="0Tg-vd-vqW">
+                                <button key="customView" opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6ap-aa-Ej1">
+                                    <rect key="frame" x="291" y="9" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <state key="normal" title="2"/>
+                                    <connections>
+                                        <action selector="barButtonAction:" destination="yip-RJ-BRD" eventType="touchUpInside" id="355-0h-tBH"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem tag="3" style="done" id="Dhs-Nn-K2F">
+                                <button key="customView" opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vhY-kO-F1q" userLabel="Refresh Button">
+                                    <rect key="frame" x="253" y="9" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <state key="normal" title="1">
+                                        <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="barButtonAction:" destination="yip-RJ-BRD" eventType="touchUpInside" id="Bpj-NU-t6z"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="refreshButton" destination="vhY-kO-F1q" id="U8p-V3-uQA"/>
+                        <outlet property="settingsButton" destination="73z-qr-BQI" id="OnE-y0-V9B"/>
+                        <outlet property="sortButton" destination="6ap-aa-Ej1" id="yrg-bU-VWD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPE-0M-u3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.40000000000001" y="-726.38680659670172"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kxj-TN-etv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RQk-2A-75N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="84W-0d-vg6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yip-RJ-BRD" kind="relationship" relationship="rootViewController" id="jIW-ek-FbA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQg-4l-Lly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-863" y="-726"/>
+        </scene>
+    </scenes>
+</document>

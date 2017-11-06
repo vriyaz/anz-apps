@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xqw-kb-kEk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MasterViewController" customModule="anz_math" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fxQ-zO-Ypd">
+                                <rect key="frame" x="20" y="167.5" width="335" height="332"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlm-bU-k9w">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="68"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Z8U-Kf-c1v">
+                                        <rect key="frame" x="0.0" y="88" width="335" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bd-pf-AOU" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="68"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="moa-x2-O8u" kind="showDetail" identifier="Addition" id="CJg-tp-Ivl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-on-BI3" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="147.5" height="68"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <state key="normal" title="−">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="moa-x2-O8u" kind="showDetail" identifier="Subtraction" id="UKh-wH-14d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-VA-Jea">
+                                        <rect key="frame" x="0.0" y="176" width="335" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dve-uV-c5C" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="68"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <state key="normal" title="×">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="moa-x2-O8u" kind="showDetail" identifier="Multiplication" id="agQ-nV-gPm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-f7-jgy" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="147.5" height="68"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="moa-x2-O8u" kind="showDetail" identifier="Division" id="c6b-ni-2Je"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oOq-o7-ITp">
+                                        <rect key="frame" x="0.0" y="264" width="335" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-j1-5dP" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="68"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="settings">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="a8x-ds-Yq2" kind="showDetail" identifier="Settings" id="rlB-bH-pj1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fxQ-zO-Ypd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3Q-FX-cpW"/>
+                            <constraint firstItem="fxQ-zO-Ypd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lOc-iH-Ab7"/>
+                            <constraint firstItem="fxQ-zO-Ypd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ydf-IP-KOp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XmM-ua-Rll"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="-1238"/>
+        </scene>
+        <!--Addition-->
+        <scene sceneID="TCm-0C-3No">
+            <objects>
+                <viewController id="M2n-Iv-upa" customClass="MathViewController" customModule="anz_math" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hoy-De-YBR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Cco-2S-Uvp" userLabel="Number Pad">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-Ye-OxQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ji-Ev-ns1" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="Nif-WD-z8f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh8-hQ-MrQ" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="71" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="tkK-6U-GnQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74E-46-nqv" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="142" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="s6j-5B-72G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yai-Dh-fdr" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="213" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="Vip-Dk-sNa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJo-1e-79l" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="284" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="LlA-0N-IZa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V5h-KP-P8Y">
+                                        <rect key="frame" x="0.0" y="20" width="335" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQP-sG-5nB" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="jri-9X-3H7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-1h-KzK" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="71" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="Uf7-dn-pex"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHY-gS-k25" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="142" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="F5W-vh-L3G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzB-AU-xAp" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="213" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="s1D-Cb-8Wu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbc-V8-9yT" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="284" y="0.0" width="51" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="ICN-gU-kxq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yr6-2v-JOQ">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-a4-bYE" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="✘">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="actionPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="fc9-IK-ROb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCm-kN-nwl" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="0.0"/>
+                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="➡︎">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="actionPressed:" destination="M2n-Iv-upa" eventType="touchUpInside" id="amA-oX-gmE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMr-8F-8eV">
+                                <rect key="frame" x="16" y="104" width="343" height="463"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard.jpg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rah-ex-3Tb">
+                                        <rect key="frame" x="8" y="8" width="327" height="447"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerViewRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="redraw" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1T6-fg-Cgn">
+                                        <rect key="frame" x="20" y="204.5" width="303" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8V-oa-XdO">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLR-35-gZB">
+                                                <rect key="frame" x="65" y="0.0" width="28.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="32"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-sX-mSu">
+                                                <rect key="frame" x="103.5" y="0.0" width="54.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axz-ks-bp5">
+                                                <rect key="frame" x="168" y="0.0" width="42.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diH-zL-Vuj">
+                                                <rect key="frame" x="220.5" y="0.0" width="82.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="48"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Rah-ex-3Tb" firstAttribute="centerX" secondItem="1T6-fg-Cgn" secondAttribute="centerX" id="ARX-MK-Sq4"/>
+                                    <constraint firstItem="Rah-ex-3Tb" firstAttribute="centerY" secondItem="1T6-fg-Cgn" secondAttribute="centerY" id="Hu6-Gg-6pc"/>
+                                    <constraint firstItem="Rah-ex-3Tb" firstAttribute="leading" secondItem="qMr-8F-8eV" secondAttribute="leadingMargin" id="Im7-Wq-ojG"/>
+                                    <constraint firstItem="Rah-ex-3Tb" firstAttribute="bottom" secondItem="qMr-8F-8eV" secondAttribute="bottomMargin" id="UD4-iB-KwB"/>
+                                    <constraint firstItem="Rah-ex-3Tb" firstAttribute="trailing" secondItem="qMr-8F-8eV" secondAttribute="trailingMargin" id="VIX-32-MYA"/>
+                                    <constraint firstItem="Rah-ex-3Tb" firstAttribute="top" secondItem="qMr-8F-8eV" secondAttribute="topMargin" id="fyK-wE-MXC"/>
+                                    <constraint firstItem="1T6-fg-Cgn" firstAttribute="leading" secondItem="qMr-8F-8eV" secondAttribute="leading" constant="20" id="v3V-7w-aMC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qMr-8F-8eV" firstAttribute="top" secondItem="W0B-4J-YrC" secondAttribute="top" constant="40" id="0CS-8I-EaS"/>
+                            <constraint firstItem="W0B-4J-YrC" firstAttribute="bottom" secondItem="Cco-2S-Uvp" secondAttribute="bottom" constant="20" id="0mL-aC-mdg"/>
+                            <constraint firstItem="Cco-2S-Uvp" firstAttribute="leading" secondItem="W0B-4J-YrC" secondAttribute="leading" constant="20" id="Enf-g5-Wcm"/>
+                            <constraint firstItem="qMr-8F-8eV" firstAttribute="leading" secondItem="hoy-De-YBR" secondAttribute="leadingMargin" id="TYj-R9-ex1"/>
+                            <constraint firstItem="qMr-8F-8eV" firstAttribute="centerX" secondItem="Cco-2S-Uvp" secondAttribute="centerX" id="cYm-kC-woe"/>
+                            <constraint firstItem="qMr-8F-8eV" firstAttribute="trailing" secondItem="hoy-De-YBR" secondAttribute="trailingMargin" id="hEI-nR-1JS"/>
+                            <constraint firstItem="Cco-2S-Uvp" firstAttribute="top" secondItem="qMr-8F-8eV" secondAttribute="bottom" constant="40" id="ii8-7x-LYZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W0B-4J-YrC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Addition" id="ZL3-ue-Pnb"/>
+                    <connections>
+                        <outlet property="operand1" destination="S8V-oa-XdO" id="RHC-p4-46d"/>
+                        <outlet property="operand2" destination="ghg-sX-mSu" id="i9y-ax-dc2"/>
+                        <outlet property="operation" destination="PLR-35-gZB" id="9Hv-vs-7mt"/>
+                        <outlet property="result" destination="diH-zL-Vuj" id="wit-CE-SFo"/>
+                        <segue destination="ZCz-yH-SGJ" kind="presentation" identifier="showPopOver" modalPresentationStyle="currentContext" id="HBD-Vc-n6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inv-NM-A5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="-429"/>
+        </scene>
+        <!--Pop Over View Controller-->
+        <scene sceneID="7bI-9k-NTn">
+            <objects>
+                <viewController storyboardIdentifier="alert" modalPresentationStyle="currentContext" id="ZCz-yH-SGJ" customClass="PopOverViewController" customModule="anz_math" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="Bcv-6U-xA9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8i-3e-GQD">
+                                <rect key="frame" x="50" y="265.5" width="275" height="136"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Khq-qj-8oN">
+                                        <rect key="frame" x="0.0" y="20" width="276.5" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome 👍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfp-J8-9b9">
+                                                <rect key="frame" x="68.5" y="0.0" width="139.5" height="28"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azm-5S-k6K" customClass="UIRoundButton" customModule="anz_math" customModuleProvider="target">
+                                                <rect key="frame" x="58" y="68" width="161" height="28"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                                <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
+                                                <state key="normal" title="Close">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dismiss:" destination="ZCz-yH-SGJ" eventType="touchUpInside" id="QiM-8i-vEL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Khq-qj-8oN" secondAttribute="bottom" constant="20" id="TTt-Mq-T9V"/>
+                                    <constraint firstItem="Khq-qj-8oN" firstAttribute="leading" secondItem="e8i-3e-GQD" secondAttribute="leading" id="dEY-La-i2e"/>
+                                    <constraint firstItem="Khq-qj-8oN" firstAttribute="centerY" secondItem="e8i-3e-GQD" secondAttribute="centerY" id="q4c-dY-weu"/>
+                                    <constraint firstItem="Khq-qj-8oN" firstAttribute="centerX" secondItem="e8i-3e-GQD" secondAttribute="centerX" id="xxH-1i-vei"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerViewRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="e8i-3e-GQD" firstAttribute="centerY" secondItem="Bcv-6U-xA9" secondAttribute="centerY" id="92G-Ni-G42"/>
+                            <constraint firstItem="e8i-3e-GQD" firstAttribute="leading" secondItem="uap-VD-FaS" secondAttribute="leading" constant="50" id="q9j-rT-1en"/>
+                            <constraint firstItem="e8i-3e-GQD" firstAttribute="centerX" secondItem="Bcv-6U-xA9" secondAttribute="centerX" id="zQK-kY-dhw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uap-VD-FaS"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="200"/>
+                    <connections>
+                        <outlet property="message" destination="mfp-J8-9b9" id="4CC-5V-SzF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T84-ZQ-5C4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="371.96401799100454"/>
+        </scene>
+        <!--Math Settings-->
+        <scene sceneID="1LJ-7E-k76">
+            <objects>
+                <viewController id="17I-HE-kGY" customClass="SettingsViewController" customModule="anz_math" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Fy-fy-pGe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fPJ-gG-h5Z">
+                                <rect key="frame" x="20" y="84" width="335" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrc-rl-qGM">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="28"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LW2-3j-UGI">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="ePz-7M-rXy"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Beginner"/>
+                                            <segment title="Intermediate"/>
+                                            <segment title="Expert"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="levelChanged:" destination="17I-HE-kGY" eventType="valueChanged" id="Ijc-R8-CcX"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fPJ-gG-h5Z" firstAttribute="top" secondItem="rle-qg-DfW" secondAttribute="top" constant="20" id="CHy-Xz-FkF"/>
+                            <constraint firstItem="rle-qg-DfW" firstAttribute="trailing" secondItem="fPJ-gG-h5Z" secondAttribute="trailing" constant="20" id="JAp-jg-fqo"/>
+                            <constraint firstItem="fPJ-gG-h5Z" firstAttribute="leading" secondItem="rle-qg-DfW" secondAttribute="leading" constant="20" id="Wwj-P0-KDu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rle-qg-DfW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Math Settings" id="L4z-sM-CYz"/>
+                    <connections>
+                        <outlet property="level" destination="LW2-3j-UGI" id="VFu-XO-tOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Y4-cm-C8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688.8" y="-449.32533733133437"/>
+        </scene>
+        <!--Main Split View Controller-->
+        <scene sceneID="I2z-aG-45B">
+            <objects>
+                <splitViewController id="xqw-kb-kEk" customClass="MainSplitViewController" customModule="anz_math" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="sMq-LT-GzH" kind="relationship" relationship="masterViewController" id="a5H-qF-mIk"/>
+                        <segue destination="moa-x2-O8u" kind="relationship" relationship="detailViewController" id="IdT-B5-Vjd"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR0-qX-DsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1841" y="-823"/>
+        </scene>
+        <!--Detail Navigation Controller-->
+        <scene sceneID="SiL-kl-akP">
+            <objects>
+                <navigationController title="Detail Navigation Controller" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="moa-x2-O8u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5bB-bM-jVh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="32"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M2n-Iv-upa" kind="relationship" relationship="rootViewController" id="aR8-gE-NRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f37-hh-kh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930" y="-428"/>
+        </scene>
+        <!--Master Navigation Controller-->
+        <scene sceneID="9Pu-72-dCj">
+            <objects>
+                <navigationController title="Master Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="sMq-LT-GzH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dkd-UA-oRF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dAy-4a-2ZD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HZW-6j-Qoh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89v-mN-hNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930" y="-1238"/>
+        </scene>
+        <!--Settings Navigation Controller-->
+        <scene sceneID="79o-Jd-FTo">
+            <objects>
+                <navigationController title="Settings Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="a8x-ds-Yq2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VZW-QA-eQT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="17I-HE-kGY" kind="relationship" relationship="rootViewController" id="NU0-W5-USn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lb-kB-ijX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966.39999999999998" y="-448.87556221889059"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chalkboard.jpg" width="1920" height="1258"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UKh-wH-14d"/>
+    </inferredMetricsTieBreakers>
+</document>
